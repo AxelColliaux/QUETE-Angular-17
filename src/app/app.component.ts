@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { InterceptorService } from './services/interceptor.service';
+import { ApiService } from './services/api.service';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +11,10 @@ export class AppComponent implements OnInit {
 
   data?: any[];
 
-  constructor(private interceptorService: InterceptorService) { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-    this.interceptorService.getData().subscribe((result) => {
+    this.apiService.getData().subscribe((result) => {
       this.data = result;
       console.log(this.data);
     });

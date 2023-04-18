@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class InterceptorService {
+export class ApiService {
   private apiUrl = 'https://jsonplaceholder.typicode.com/todos/1'; // Remplacer par votre URL d'API publique
 
   constructor(private http: HttpClient) { }
